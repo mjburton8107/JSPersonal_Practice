@@ -225,3 +225,39 @@ function romanNumeralConvertor (romNum){
 }
 
 console.log(romanNumeralConvertor("IX"));
+
+//class version done by Luke
+// function arrayMinuser (array){
+//   var result = array[array.length - 1];
+//
+//   for (var i = array.length - 2; i >= 0; i--){
+//     result = result - 1
+//   }
+// }
+//
+// function arrayPlus (array) {
+//   var result = 0;
+//
+// }
+//
+//
+// function romanNum(rn){
+//
+//   var romanNumeralMapper = {
+//     I : 1,
+//     V: 5,
+//     X: 10,
+//   }
+//
+//   var rnArray = rn.split('');
+//
+//   var numArray = rnArray.map(function(romanNumberItem){
+//     return romanNumeralMapper[romanNumberItem]
+//   })
+//
+//   if(numArray[numArray.length-1] === 1){
+//     return
+//   }
+//
+//
+// }
