@@ -261,3 +261,22 @@ console.log(romanNumeralConvertor("IX"));
 //
 //
 // }
+
+
+//problem from CodeCardio about finding the longest word in an array
+
+//Complete the function longestWord to take in a sentence and return the longest word in the sentence. Assume that there will not be a tie for the longest word.
+
+function longestWord(sen) {
+  var newArray = sen.split(' ');
+  console.log(newArray);
+  var longest = '';
+  for (var i = 0; i < newArray.length; i++){
+    if(newArray[i].length > longest.length){
+      longest = newArray[i];
+    }
+  }
+  return longest;
+}
+
+longestWord("I am looking for the longest word in this reallylongwordevenlonger");
