@@ -280,3 +280,100 @@ function longestWord(sen) {
 }
 
 longestWord("I am looking for the longest word in this reallylongwordevenlonger");
+
+/*Have the function exOh(str) take the str parameter being passed and return true if there is an equal number of x's and o's, otherwise rfalse.
+Only these two letters will be entered in the string, no punctuation or numbers. For example: if str is "xooxxxxooxo"
+then the output should return false because there are 6 x's and 5 o's.*/
+
+function exOh(str) {
+  var newArray = str.split('');
+  var countXs = 0
+  var countOs = 0
+  for (var i = 0; i < newArray.length; i++){
+    if(newArray[i] == 'x'){
+      countXs++;
+    } else if(newArray[i]== 'o'){
+      countOs++;
+    }
+  }
+  if(countOs === countXs){
+    return true;
+  } else return false;
+}
+
+exOh("xooxxxooxox");
+
+/*Finish the function missingNo so that it takes in a sorted array of integers which contains all integers
+between 0 and N except one value, and returns the missing integer in that array.
+
+Example: if you are passed [0,1,2,3,5], this is an array between 0 and 5, it is sorted.
+However, the number 4 is missing. Your function needs to return 4.*/
+
+var numberFinder = function(arr){
+  for (var i = 1; i < arr.length; i++){
+    if(arr[i] - arr[i-1] != 1){
+      return arr[i] - 1;
+    }
+  }
+}
+
+numberFinder([0,1,2,3,5]);
+
+/*Write a function called teamWin that will be passed into the teamTrack function as a callback, along with an object
+representing the winning team and an object representing the losing team. In the teamWin function,
+increment the winning teams wins by one, and increment the losing teams losses by one.*/
+
+var seahawks = {
+  	name: "Seahawks",
+	wins: 0,
+	losses: 0
+}
+
+var eagles = {
+  	name: "Eagles",
+	wins: 0,
+	losses: 0
+}
+/**** Do not edit the above objects *****/
+
+
+var teamWin = function(winTeam, loseTeam){
+  winTeam.wins++;
+  loseTeam.losses++;
+}
+
+
+/**** Do not edit the function below ****/
+var teamTrack = function(winTeam, loseTeam, callback){
+	callback(winTeam, loseTeam)
+}
+
+//Write a function named callbackFunc that takes in two numbers and a callback function, and returns the result of the callback function being executed with the two numbers.
+
+//DON'T CHANGE THIS CODE
+function adder(x, y) {
+    return x + y;
+}
+
+function subtractor(x, y) {
+    return x - y;
+}
+
+function multiplier(x, y) {
+    return x * y;
+}
+
+var callbackFunc = function(x, y, cb){
+  return cb(x, y);
+}
+
+
+
+//DON'T CHANGE THIS EITHER pls
+var x = callbackFunc(2, 3, adder); // x = 5
+var y = callbackFunc(5, 2, subtractor); // y = 3
+var z = callbackFunc(3, 6, multiplier); // z = 18
+
+console.log(x);
+console.log(y);
+console.log(z);
