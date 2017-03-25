@@ -377,3 +377,22 @@ var z = callbackFunc(3, 6, multiplier); // z = 18
 console.log(x);
 console.log(y);
 console.log(z);
+
+
+//Luke on 3/25 asked us to recreate the map function using just js
+
+var numArray = [2, 4, 6, 8, 10];
+
+function recreatedMap (array, cb) {
+  var newArray = [];
+  array.forEach(function(item, index){
+    newArray.push(cb(item, index))
+  })
+  return newArray;
+}
+
+var anotherArray = recreatedMap(numArray, function(item, index){
+  return item + 1;
+})
+
+console.log(anotherArray);
